@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -14,10 +16,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/force/logout', function (Request $request) {
+    Auth::guard('web')->logout();
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+    return redirect()->route('login');
+});
+
 Route::get('/', function () {
     return view('landing.index');
 })->name('landing.index');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
