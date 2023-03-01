@@ -5,81 +5,84 @@
         <div class="section-title">
 
             <h2>Frequently Asked Questions</h2>
-            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
-                sit in iste officiis commodi quidem hic quas.</p>
+            <p>Lihat pertanyaan dan jawaban yang sering ditanyakan kepada kami, ini akan membantu anda untuk mengetahui hal-hal umum tentang kami.</p>
         </div>
 
         <div class="accordion-list">
             <ul>
                 <li data-aos="fade-up">
-                    <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
-                        data-bs-target="#accordion-list-1">Non consectetur a erat nam at lectus urna duis? <i
-                            class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                    <i class="bx bx-help-circle icon-help"></i>
+                    <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">Apakah Saya bisa mengganti kata-kata didalam MC WEDDING? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                     <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
                         <p>
-                            Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
-                            curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                            Ya, anda bisa mengganti kata-kata didalam website anda, anda cukup masuk ke menu Bahasa Custom. Ada penomoran bahasa yang bisa anda rubah seperti penggantian nama acara, ucapan dan yang lainnya. <br>
+                            <strong>Catatan:</strong> Tidak semua bahasa yang ada tersedia seluruhnya didalam template, jadi sangat menyesuaikan dengan template yang anda pilih.
                         </p>
                     </div>
                 </li>
-
-                <li data-aos="fade-up" data-aos-delay="100">
-                    <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                        data-bs-target="#accordion-list-2" class="collapsed">Feugiat scelerisque varius morbi enim nunc?
-                        <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                    <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                <li data-aos="fade-up">
+                    <i class="bx bx-help-circle icon-help"></i>
+                    <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">Apakah kata-kata GRATIS pada bagian footer hilang ketika Upgrade Paket? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                    <div id="accordion-list-1" class="collapse" data-bs-parent=".accordion-list">
                         <p>
-                            Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit
-                            laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium.
-                            Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa
-                            tincidunt dui.
+                            Ya, selain kami mengaktifkan semua fitur yang sesuai dengan paket yang anda pilih, tulisan "Gratis" pada bagian halaman website anda ketika anda menggunakan paket gratis akan hilang.
                         </p>
                     </div>
                 </li>
-
-                <li data-aos="fade-up" data-aos-delay="200">
-                    <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                        data-bs-target="#accordion-list-3" class="collapsed">Dolor sit amet consectetur adipiscing elit?
-                        <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                    <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                <li data-aos="fade-up">
+                    <i class="bx bx-help-circle icon-help"></i>
+                    <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">Apakah Satu Paket untuk Banyak Website Undangan Pernikahan? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                    <div id="accordion-list-1" class="collapse" data-bs-parent=".accordion-list">
                         <p>
-                            Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar
-                            elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus
-                            pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at
-                            elementum eu facilisis sed odio morbi quis
+                            Tidak, satu paket undangan digital dalam bentuk website hanya berlaku untuk 1 website. Artinya ketika anda mendaftar 1 buah akun di webnikah maka website yang bisa dibuat hanya satu.
                         </p>
                     </div>
                 </li>
-
-                <li data-aos="fade-up" data-aos-delay="300">
-                    <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                        data-bs-target="#accordion-list-4" class="collapsed">Tempus quam pellentesque nec nam aliquam
-                        sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i
-                            class="bx bx-chevron-up icon-close"></i></a>
-                    <div id="accordion-list-4" class="collapse" data-bs-parent=".accordion-list">
+                <li data-aos="fade-up">
+                    <i class="bx bx-help-circle icon-help"></i>
+                    <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">Apakah Pengiriman Undangan Bisa Khusus untuk Orang tertentu? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                    <div id="accordion-list-1" class="collapse" data-bs-parent=".accordion-list">
                         <p>
-                            Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est
-                            ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing
-                            bibendum est. Purus gravida quis blandit turpis cursus in.
+                            Ya, bila anda menggunakan paket Premium anda bisa mengirimkan undangan dengan nama dan tempatnya. Misalnya anda akan mengirimkan untuk teman anda yang bernama Mawar di Bandung. Maka anda cukup menambahkan teks kepada:Mawar-Bandung di URL yang anda share melalui WhatsApps, SMS atau media lainnya.
                         </p>
                     </div>
                 </li>
-
-                <li data-aos="fade-up" data-aos-delay="400">
-                    <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                        data-bs-target="#accordion-list-5" class="collapsed">Tortor vitae purus faucibus ornare. Varius
-                        vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i
-                            class="bx bx-chevron-up icon-close"></i></a>
-                    <div id="accordion-list-5" class="collapse" data-bs-parent=".accordion-list">
+                <li data-aos="fade-up">
+                    <i class="bx bx-help-circle icon-help"></i>
+                    <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">Saya sudah set Musik Background Tapi Kenapa Tidak Bunyi Saat website dibuka? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                    <div id="accordion-list-1" class="collapse" data-bs-parent=".accordion-list">
                         <p>
-                            Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer
-                            malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem
-                            dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
+                            Tidak ada masalah dengan apa yang telah anda setting. Sesuai aturan Browser terbaru baik itu Chrome, Firefox dan yang lainnya bahwa Musik otomatis bunyi tidak bisa. Jadi harus ada interaksi dulu antara pengguna dengan halaman website. Di WebNikah, penerima undangan atau yang membuka website anda harus klik salah satu menu seperti "Buka Undangan" atau menu lainnya, setelah itu musik otomatis akan berjalan
                         </p>
                     </div>
                 </li>
-
+                <li data-aos="fade-up">
+                    <i class="bx bx-help-circle icon-help"></i>
+                    <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">Apakah Susunan Bagian didalam Template Bisa Diatur Sendiri? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                    <div id="accordion-list-1" class="collapse" data-bs-parent=".accordion-list">
+                        <p>
+                            Mohon maaf, untuk susunan bagian didalam template tidak bisa diatur sendiri, jadi sesuai dengan template yang dipilih
+                        </p>
+                    </div>
+                </li>
+                <li data-aos="fade-up">
+                    <i class="bx bx-help-circle icon-help"></i>
+                    <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">Apakah saya bisa mengganti Font di Template? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                    <div id="accordion-list-1" class="collapse" data-bs-parent=".accordion-list">
+                        <p>
+                            Mohon maaf tidak bisa melakukan penggantian font, baik jenis, ukuran, warna ataupun style. Tidak ada pengaturan template kecuali yang berhubungan dengan gambar background, galeri ataupun bahasa.
+                        </p>
+                    </div>
+                </li>
+                <li data-aos="fade-up">
+                    <i class="bx bx-help-circle icon-help"></i>
+                    <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">Saya Sudah Upgrade Paket, Apakah saya dibuatkan Websitenya? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                    <div id="accordion-list-1" class="collapse" data-bs-parent=".accordion-list">
+                        <p>
+                            Mohon maaf, layanan webnikah dan seluruh fiturnya di lakukan sendiri, namun demikian bila ada kesulitan, kami tentu siap membantu.
+                        </p>
+                    </div>
+                </li>
             </ul>
         </div>
 

@@ -26,17 +26,9 @@
 
     @include('landing.section.1')
 
-    @include('landing.section.2')
-
-    @include('landing.section.3')
-
     @include('landing.section.4')
 
-    @include('landing.section.5')
-
     @include('landing.section.6')
-
-    @include('landing.section.7')
 
   </main><!-- End #main -->
 
