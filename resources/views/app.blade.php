@@ -52,9 +52,19 @@
 							</div>
 							<div class="d-flex">
 								<div class="justify-content-center">
-									<a href="#" class="btn btn-primary my-2 btn-icon-text">
-									  <i class="fe fe-link mr-2"></i> Lihat Website
-									</a>
+                                    @php
+                                        $setting = App\Models\GeneralSetting::where('user_id', Auth::user()->id)->get();
+                                    @endphp
+                                    @foreach ($setting as $data)
+                                        <a href="{{ env('APP_URL').'/'.$data->domain }}" target="_blank" class="btn btn-primary my-2 btn-icon-text">
+                                            <i class="fe fe-link mr-2"></i> Lihat Website
+                                        </a>
+                                    @endforeach
+                                    @if(Auth::user()->premium_status == 1)
+                                        <a href="javascript:void(0)" class="btn btn-primary my-2 btn-icon-text">
+                                            <i class="fe fe-clipboard mr-2"></i> Salin Link Website
+                                        </a>
+                                    @endif
 								</div>
 							</div>
 						</div>

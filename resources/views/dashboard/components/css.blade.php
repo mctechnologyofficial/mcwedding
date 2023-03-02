@@ -3,7 +3,7 @@
 
 <!-- Icons css-->
 <link href="{{ asset('dashboard/assets/plugins/web-fonts/icons.css') }}" rel="stylesheet"/>
-<link href="{{ asset('dashboard/assets/plugins/web-fonts/font-awesome/font-awesome.min.css') }}" rel="stylesheet">
+{{-- <link href="{{ asset('dashboard/assets/plugins/web-fonts/font-awesome/font-awesome.min.css') }}" rel="stylesheet"> --}}
 <link href="{{ asset('dashboard/assets/plugins/web-fonts/plugin.css') }}" rel="stylesheet"/>
 
 <!-- Style css-->
@@ -25,3 +25,9 @@
 
 <!-- Sidemenu css-->
 <link href="{{ asset('dashboard/assets/css/sidemenu/sidemenu.css') }}" rel="stylesheet">
+
+<!-- Sweet Alert 2 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.3/sweetalert2.css" integrity="sha512-us/9of/cEp3FrrmLUpCcWUAzm2gE7EOPnfEAWBMwdWR1Lpxw0orMoVvLyyoGSD9iMGAUlEd8XHzt5+SDwmdGLg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Font Awesome v6 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
