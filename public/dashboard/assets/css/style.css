@@ -7533,7 +7533,8 @@ table.dataTable thead td {
     padding: 8px 10px;
     font-weight: 700;
     font-size: 12px;
-    color: #434b63;
+    color: #fff;
+    background-color: #5777ba;
 }
 
 .dataTables_wrapper .dataTables_filter input {

@@ -23,5 +23,16 @@
 <!-- Sweet Alert 2 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.3/sweetalert2.all.js" integrity="sha512-5gz/at+6LT6tuaX/ritelLOHwVc0CoXsspPbUBPdoIrOLshcpguRTMBAKVZCdG//YdwyYP2c4n7NMaDqVXWTJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<!-- Font Awesome v6 -->
-{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}
+<!-- Internal Data Table js -->
+<script src="{{ asset('dashboard/assets/plugins/datatable/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('dashboard/assets/plugins/datatable/dataTables.bootstrap4.min.js') }}"></script>
+<script src="{{ asset('dashboard/assets/plugins/datatable/dataTables.responsive.min.js') }}"></script>
+<script src="{{ asset('dashboard/assets/plugins/datatable/fileexport/dataTables.buttons.min.js') }}"></script>
+<script src="{{ asset('dashboard/assets/plugins/datatable/fileexport/buttons.bootstrap4.min.js') }}"></script>
+<script src="{{ asset('dashboard/assets/plugins/datatable/fileexport/jszip.min.js') }}"></script>
+<script src="{{ asset('dashboard/assets/plugins/datatable/fileexport/pdfmake.min.js') }}"></script>
+<script src="{{ asset('dashboard/assets/plugins/datatable/fileexport/vfs_fonts.js') }}"></script>
+<script src="{{ asset('dashboard/assets/plugins/datatable/fileexport/buttons.html5.min.js') }}"></script>
+<script src="{{ asset('dashboard/assets/plugins/datatable/fileexport/buttons.print.min.js') }}"></script>
+<script src="{{ asset('dashboard/assets/plugins/datatable/fileexport/buttons.colVis.min.js') }}"></script>
+<script src="{{ asset('dashboard/assets/js/table-data.js') }}"></script>

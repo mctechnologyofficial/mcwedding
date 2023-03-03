@@ -70,8 +70,8 @@
                         <span class="sidemenu-label">Mempelai Wanita</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href=""><span class="shape1"></span>
+                <li class="nav-item {{ (\Request::routeIs('user.lovestory.*')) ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('user.lovestory.index') }}"><span class="shape1"></span>
                         <span class="shape2"></span>
                         <i class="fas fa-heart sidemenu-icon"></i>
                         <span class="sidemenu-label">Cerita Cinta</span>

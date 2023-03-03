@@ -98,11 +98,17 @@ class BrideWomanController extends Controller
                 $filename = sprintf('%s_%s.%s', date('Y-m-d'), md5(microtime(true)), $file->extension());
                 $image_path = $file->move('storage/bridewoman', $filename);
             }else{
-                unlink($brideman->image);
+                if(file_exists($brideman->image)){
+                    unlink($brideman->image);
 
-                $file = $request->file('image');
-                $filename = sprintf('%s_%s.%s', date('Y-m-d'), md5(microtime(true)), $file->extension());
-                $image_path = $file->move('storage/bridewoman', $filename);
+                    $file = $request->file('image');
+                    $filename = sprintf('%s_%s.%s', date('Y-m-d'), md5(microtime(true)), $file->extension());
+                    $image_path = $file->move('storage/bridewoman', $filename);
+                }else{
+                    $file = $request->file('image');
+                    $filename = sprintf('%s_%s.%s', date('Y-m-d'), md5(microtime(true)), $file->extension());
+                    $image_path = $file->move('storage/bridewoman', $filename);
+                }
             }
         }else{
             $image_path = $brideman->image;

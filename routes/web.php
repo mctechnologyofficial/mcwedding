@@ -5,6 +5,7 @@ use App\Http\Controllers\InvitationController;
 use App\Http\Controllers\User\GeneralSettingController;
 use App\Http\Controllers\User\BrideManController;
 use App\Http\Controllers\User\BrideWomanController;
+use App\Http\Controllers\User\LoveStoryController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -42,7 +43,7 @@ Route::controller(InvitationController::class)->group(function(){
 Route::group(['middleware' => ['role:user']], function () {
 
     Route::prefix('dashboard')->group(function(){
-        
+
         // General Setting Route
         Route::controller(GeneralSettingController::class)->group(function(){
             Route::get('/settings', 'index')->name('user.settings.index');
@@ -62,6 +63,16 @@ Route::group(['middleware' => ['role:user']], function () {
             Route::get('/mempelaiwanita', 'index')->name('user.bridewoman.index');
             Route::post('/mempelaiwanita/store', 'store')->name('user.bridewoman.store');
             Route::put('/mempelaiwanita/update', 'update')->name('user.bridewoman.update');
+        });
+
+        // Love Story Route
+        Route::controller(LoveStoryController::class)->group(function(){
+            Route::get('/ceritacinta', 'index')->name('user.lovestory.index');
+            Route::get('/ceritacinta/create', 'create')->name('user.lovestory.create');
+            Route::post('/ceritacinta/store', 'store')->name('user.lovestory.store');
+            Route::get('/ceritacinta/{id}/edit', 'edit')->name('user.lovestory.edit');
+            Route::put('/ceritacinta/{id}/update', 'update')->name('user.lovestory.update');
+            Route::delete('/ceritacinta/{id}/destroy', 'destroy')->name('user.lovestory.destroy');
         });
     });
 });
