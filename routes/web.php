@@ -5,6 +5,7 @@ use App\Http\Controllers\InvitationController;
 use App\Http\Controllers\User\GeneralSettingController;
 use App\Http\Controllers\User\BrideManController;
 use App\Http\Controllers\User\BrideWomanController;
+use App\Http\Controllers\User\EventInformationController;
 use App\Http\Controllers\User\LoveStoryController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -73,6 +74,13 @@ Route::group(['middleware' => ['role:user']], function () {
             Route::get('/ceritacinta/{id}/edit', 'edit')->name('user.lovestory.edit');
             Route::put('/ceritacinta/{id}/update', 'update')->name('user.lovestory.update');
             Route::delete('/ceritacinta/{id}/destroy', 'destroy')->name('user.lovestory.destroy');
+        });
+
+        // Event Information Route
+        Route::controller(EventInformationController::class)->group(function(){
+            Route::get('/informasiacara', 'index')->name('user.eventinformation.index');
+            Route::get('/informasiacara/{id}/edit', 'edit')->name('user.eventinformation.edit');
+            Route::put('/informasiacara/{id}/update', 'update')->name('user.eventinformation.update');
         });
     });
 });

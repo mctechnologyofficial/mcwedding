@@ -77,8 +77,8 @@
                         <span class="sidemenu-label">Cerita Cinta</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href=""><span class="shape1"></span>
+                <li class="nav-item {{ (\Request::routeIs('user.eventinformation.*')) ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('user.eventinformation.index') }}"><span class="shape1"></span>
                         <span class="shape2"></span>
                         <i class="fas fa-calendar-days sidemenu-icon"></i>
                         <span class="sidemenu-label">Informasi Acara</span>
@@ -89,13 +89,6 @@
                         <span class="shape2"></span>
                         <i class="fas fa-envelope sidemenu-icon"></i>
                         <span class="sidemenu-label">Informasi Undangan</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href=""><span class="shape1"></span>
-                        <span class="shape2"></span>
-                        <i class="fas fa-users sidemenu-icon"></i>
-                        <span class="sidemenu-label">RSVP Undangan</span>
                     </a>
                 </li>
                 <li class="nav-item">
