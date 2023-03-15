@@ -36,3 +36,6 @@
 <link href="{{ asset('dashboard/assets/plugins/datatable/dataTables.bootstrap4.min.css') }}" rel="stylesheet" />
 <link href="{{ asset('dashboard/assets/plugins/datatable/responsivebootstrap4.min.css') }}" rel="stylesheet" />
 <link href="{{ asset('dashboard/assets/plugins/datatable/fileexport/buttons.bootstrap4.min.css') }}" rel="stylesheet" />
+
+<!-- Jquery Time Picker -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">

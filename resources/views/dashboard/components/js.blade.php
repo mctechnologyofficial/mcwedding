@@ -36,3 +36,6 @@
 <script src="{{ asset('dashboard/assets/plugins/datatable/fileexport/buttons.print.min.js') }}"></script>
 <script src="{{ asset('dashboard/assets/plugins/datatable/fileexport/buttons.colVis.min.js') }}"></script>
 <script src="{{ asset('dashboard/assets/js/table-data.js') }}"></script>
+
+<!-- Jquery Time Picker -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>

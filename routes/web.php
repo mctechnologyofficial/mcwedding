@@ -6,6 +6,7 @@ use App\Http\Controllers\User\GeneralSettingController;
 use App\Http\Controllers\User\BrideManController;
 use App\Http\Controllers\User\BrideWomanController;
 use App\Http\Controllers\User\EventInformationController;
+use App\Http\Controllers\User\InvitationInformationController;
 use App\Http\Controllers\User\LoveStoryController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -79,8 +80,19 @@ Route::group(['middleware' => ['role:user']], function () {
         // Event Information Route
         Route::controller(EventInformationController::class)->group(function(){
             Route::get('/informasiacara', 'index')->name('user.eventinformation.index');
+            Route::get('/informasiacara/create', 'create')->name('user.eventinformation.create');
+            Route::post('/informasiacara/store', 'store')->name('user.eventinformation.store');
             Route::get('/informasiacara/{id}/edit', 'edit')->name('user.eventinformation.edit');
             Route::put('/informasiacara/{id}/update', 'update')->name('user.eventinformation.update');
+        });
+
+        // Invitation Information Route
+        Route::controller(InvitationInformationController::class)->group(function(){
+            Route::get('/informasiundangan', 'index')->name('user.invitationinformation.index');
+            Route::get('/informasiundangan/create', 'create')->name('user.invitationinformation.create');
+            Route::post('/informasiundangan/store', 'store')->name('user.invitationinformation.store');
+            Route::get('/informasiundangan/{id}/edit', 'edit')->name('user.invitationinformation.edit');
+            Route::put('/informasiundangan/{id}/update', 'update')->name('user.invitationinformation.update');
         });
     });
 });

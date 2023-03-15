@@ -84,8 +84,8 @@
                         <span class="sidemenu-label">Informasi Acara</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href=""><span class="shape1"></span>
+                <li class="nav-item {{ (\Request::routeIs('user.invitationinformation.*')) ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('user.invitationinformation.index') }}"><span class="shape1"></span>
                         <span class="shape2"></span>
                         <i class="fas fa-envelope sidemenu-icon"></i>
                         <span class="sidemenu-label">Informasi Undangan</span>

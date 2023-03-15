@@ -14,15 +14,14 @@
             );
         </script>
     @endif
-    <form action="{{ route('user.eventinformation.update', $event->id) }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('user.eventinformation.store') }}" method="post" enctype="multipart/form-data">
         @csrf
-        @method('PUT')
-
         <div class="row row-sm">
             <div class="col-lg-12">
                 <div class="card custom-card">
                     <div class="card-header">
                         <h4 class="card-title">Settingan Umum</h4>
+                        <div id="map"></div>
                     </div>
                     <div class="card-body">
                         <div>
@@ -33,12 +32,12 @@
                                 <div class="col-lg-8">
                                     <select name="religion" class="form-control">
                                         <option value="" selected disabled>Pilih Agama</option>
-                                        <option value="Islam" @if($event->religion == "Islam") selected @endif>Islam</option>
-                                        <option value="Protestan" @if($event->religion == "Protestan") selected @endif>Protestan</option>
-                                        <option value="Katholik" @if($event->religion == "Katholik") selected @endif>Katholik</option>
-                                        <option value="Hindu" @if($event->religion == "Hindu") selected @endif>Hindu</option>
-                                        <option value="Buddha" @if($event->religion == "Buddha") selected @endif>Buddha</option>
-                                        <option value="Konghucu" @if($event->religion == "Konghucu") selected @endif>Konghucu</option>
+                                        <option value="Islam">Islam</option>
+                                        <option value="Protestan">Protestan</option>
+                                        <option value="Katholik">Katholik</option>
+                                        <option value="Hindu">Hindu</option>
+                                        <option value="Buddha">Buddha</option>
+                                        <option value="Konghucu">Konghucu</option>
                                     </select>
                                 </div>
                             </div>
@@ -49,9 +48,9 @@
                                 <div class="col-lg-8">
                                     <select name="timezone" class="form-control">
                                         <option value="" selected disabled>Pilih Zona Waktu</option>
-                                        <option value="WIB" @if($event->timezone == "WIB") selected @endif>WIB (Waktu Indonesia Bagian Barat)</option>
-                                        <option value="WITA" @if($event->timezone == "WITA") selected @endif>WITA (Waktu Indonesia Bagian Tengah)</option>
-                                        <option value="WIT" @if($event->timezone == "WIT") selected @endif>WIT (Waktu Indonesia Bagian Timur)</option>
+                                        <option value="WIB">WIB (Waktu Indonesia Bagian Barat)</option>
+                                        <option value="WITA">WITA (Waktu Indonesia Bagian Tengah)</option>
+                                        <option value="WIT">WIT (Waktu Indonesia Bagian Timur)</option>
                                     </select>
                                 </div>
                             </div>
@@ -61,10 +60,10 @@
                                 </div>
                                 <div class="col-lg-8">
                                     <select name="maps_type" class="form-control">
-                                        <option value="Tidak Ditampilkan" @if($event->maps_type == "Tidak Ditampilkan") selected @endif>Tidak Ditampilkan</option>
-                                        <option value="Static Google Maps" @if($event->maps_type == "Static Google Maps") selected @endif>Static Google Maps</option>
-                                        <option value="Dynamic Maps" @if($event->maps_type == "Dynamic Maps") selected @endif>Dynamic Maps (Khusus Premium)</option>
-                                        <option value="Google Maps" @if($event->maps_type == "Google Maps") selected @endif>Google Maps (Khusus Premium)</option>
+                                        <option value="Tidak Ditampilkan">Tidak Ditampilkan</option>
+                                        <option value="Static Google Maps" selected>Static Google Maps</option>
+                                        <option value="Dynamic Maps">Dynamic Maps (Khusus Premium)</option>
+                                        <option value="Google Maps">Google Maps (Khusus Premium)</option>
                                     </select>
                                 </div>
                             </div>
@@ -88,8 +87,8 @@
                                 </div>
                                 <div class="col-lg-8">
                                     <select name="contract_validation" class="form-control">
-                                        <option value="Ditampilkan" @if($event->contract_validation == "Ditampilkan") selected @endif>Ditampilkan</option>
-                                        <option value="Sembunyikan" @if($event->contract_validation == "Sembunyikan") selected @endif>Sembunyikan</option>
+                                        <option value="Ditampilkan">Ditampilkan</option>
+                                        <option value="Sembunyikan" selected>Sembunyikan</option>
                                     </select>
                                 </div>
                             </div>
@@ -98,7 +97,7 @@
                                     <p>Nama Acara (Optional)</p>
                                 </div>
                                 <div class="col-lg-8">
-                                    <input type="text" name="contract_name" class="form-control" value="{{ $event->contract_name }}">
+                                    <input type="text" name="contract_name" class="form-control">
                                 </div>
                             </div>
                             <div class="row mb-3 contract2">
@@ -106,7 +105,7 @@
                                     <p>Tanggal Acara</p>
                                 </div>
                                 <div class="col-lg-8">
-                                    <input type="date" name="contract_date" class="form-control" value="{{ $event->contract_date }}">
+                                    <input type="date" name="contract_date" class="form-control">
                                 </div>
                             </div>
                             <div class="row mb-3 form-inline contract3">
@@ -114,9 +113,9 @@
                                     <p>Waktu Acara</p>
                                 </div>
                                 <div class="col-lg-8">
-                                    <input type="text" name="contract_time_start" class="form-control timepicker1" value="{{ $event->contract_time_start }}" readonly>
+                                    <input type="text" name="contract_time_start" class="form-control timepicker1" readonly>
                                     &nbsp; s/d &nbsp;
-                                    <input type="text" name="contract_time_end" class="form-control timepicker2" value="{{ $event->contract_time_end }}" readonly>
+                                    <input type="text" name="contract_time_end" class="form-control timepicker2" readonly>
                                 </div>
                             </div>
                             <div class="row mb-3 contract4">
@@ -124,7 +123,7 @@
                                     <p>Tempat dan Alamat</p>
                                 </div>
                                 <div class="col-lg-8">
-                                    <textarea name="contract_address" id="" cols="30" rows="5" class="form-control">{{ $event->contract_address }}</textarea>
+                                    <textarea name="contract_address" id="" cols="30" rows="5" class="form-control"></textarea>
                                 </div>
                             </div>
                             <div class="row mb-3 contract5">
@@ -132,7 +131,7 @@
                                     <p>Google Maps</p>
                                 </div>
                                 <div class="col-lg-8">
-                                    <input type="text" name="contract_url_address" class="form-control" value="{{ $event->contract_url_address }}" placeholder="Masukkan URL Google Maps yang telah anda salin">
+                                    <input type="text" name="contract_url_address" class="form-control" placeholder="Masukkan URL Google Maps yang telah anda salin">
                                 </div>
                             </div>
                         </div>
@@ -155,8 +154,8 @@
                                 </div>
                                 <div class="col-lg-8">
                                     <select name="reception_validation" class="form-control">
-                                        <option value="Ditampilkan" @if($event->reception_validation == "Ditampilkan") selected @endif>Ditampilkan</option>
-                                        <option value="Sembunyikan" @if($event->reception_validation == "Sembunyikan") selected @endif>Sembunyikan</option>
+                                        <option value="Ditampilkan">Ditampilkan</option>
+                                        <option value="Sembunyikan" selected>Sembunyikan</option>
                                     </select>
                                 </div>
                             </div>
@@ -165,7 +164,7 @@
                                     <p>Nama Acara (Optional)</p>
                                 </div>
                                 <div class="col-lg-8">
-                                    <input type="text" name="reception_name" class="form-control" value="{{ $event->reception_name }}">
+                                    <input type="text" name="reception_name" class="form-control">
                                 </div>
                             </div>
                             <div class="row mb-3 reception2">
@@ -173,7 +172,7 @@
                                     <p>Tanggal Acara</p>
                                 </div>
                                 <div class="col-lg-8">
-                                    <input type="date" name="reception_date" class="form-control" value="{{ $event->reception_date }}">
+                                    <input type="date" name="reception_date" class="form-control">
                                 </div>
                             </div>
                             <div class="row mb-3 form-inline reception3">
@@ -181,9 +180,9 @@
                                     <p>Waktu Acara</p>
                                 </div>
                                 <div class="col-lg-8">
-                                    <input type="text" name="reception_time_start" class="form-control timepicker1" value="{{ $event->reception_time_start }}" readonly>
+                                    <input type="text" name="reception_time_start" class="form-control timepicker1" readonly>
                                     &nbsp; s/d &nbsp;
-                                    <input type="text" name="reception_time_end" class="form-control timepicker2" value="{{ $event->reception_time_end }}" readonly>
+                                    <input type="text" name="reception_time_end" class="form-control timepicker2" readonly>
                                 </div>
                             </div>
                             <div class="row mb-3 reception4">
@@ -191,7 +190,7 @@
                                     <p>Tempat dan Alamat</p>
                                 </div>
                                 <div class="col-lg-8">
-                                    <textarea name="reception_address" id="" cols="30" rows="5" class="form-control">{{ $event->reception_address }}</textarea>
+                                    <textarea name="reception_address" id="" cols="30" rows="5" class="form-control"></textarea>
                                 </div>
                             </div>
                             <div class="row mb-3 reception5">
@@ -199,7 +198,7 @@
                                     <p>Google Maps</p>
                                 </div>
                                 <div class="col-lg-8">
-                                    <input type="text" name="reception_url_address" class="form-control" value="{{ $event->reception_url_address }}" placeholder="Masukkan URL Google Maps yang telah anda salin">
+                                    <input type="text" name="reception_url_address" class="form-control" placeholder="Masukkan URL Google Maps yang telah anda salin">
                                 </div>
                             </div>
                         </div>

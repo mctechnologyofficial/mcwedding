@@ -19,17 +19,17 @@ return new class extends Migration
             $table->text('maps_type');
             $table->text('contract_validation');
             $table->text('contract_name')->nullable();
-            $table->date('contract_date');
-            $table->text('contract_time_start');
-            $table->text('contract_time_end');
-            $table->longText('contract_address');
+            $table->date('contract_date')->nullable();
+            $table->text('contract_time_start')->nullable();
+            $table->text('contract_time_end')->nullable();
+            $table->longText('contract_address')->nullable();
             $table->string('contract_url_address')->nullable();
-            $table->text('reception_validation');
+            $table->text('reception_validation')->nullable();
             $table->text('reception_name')->nullable();
-            $table->date('reception_date');
-            $table->text('reception_time_start');
-            $table->text('reception_time_end');
-            $table->longText('reception_address');
+            $table->date('reception_date')->nullable();
+            $table->text('reception_time_start')->nullable();
+            $table->text('reception_time_end')->nullable();
+            $table->longText('reception_address')->nullable();
             $table->string('reception_url_address')->nullable();
             $table->timestamps();
 
