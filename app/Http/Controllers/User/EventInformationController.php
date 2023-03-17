@@ -94,19 +94,6 @@ class EventInformationController extends Controller
 
             return redirect()->route('user.eventinformation.index')->with('success', 'Informasi acara telah dibuat!');
         }
-
-        // $map = new \Mastani\GoogleStaticMap\GoogleStaticMap(env('GOOGLE_MAP_KEY'));
-        // $url = $map->setCenter('Tehran')
-        //    ->setMapType(\Mastani\GoogleStaticMap\MapType::RoadMap)
-        //    ->setZoom(14)
-        //    ->setSize(600, 600)
-        //    ->setFormat(\Mastani\GoogleStaticMap\Format::JPG)
-        //    ->addMarker('Tehran', '1', 'red', \Mastani\GoogleStaticMap\Size::Small)
-        //    ->addMarkerLatLng(-6.434947402928456, 106.85053478328331, '1', 'red', \Mastani\GoogleStaticMap\Size::Small)
-        //    ->make(); // Return url contain map address.
-        //    // or
-        //    // ->download(); // Download map image
-        // dd($url);
     }
 
     /**

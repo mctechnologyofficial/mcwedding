@@ -23,3 +23,12 @@
         </li>
     </ul>
 </li>
+
+<script>
+    $(document).on('click', '.premium-feature', function(e){
+        e.preventDefault();
+        var premium = {!! Auth::user()->premium_status !!};
+
+        alert('oke');
+    });
+</script>

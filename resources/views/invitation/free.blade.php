@@ -80,7 +80,7 @@
                                     Akan segera melangsungkan pernikahan
                                 </p>
 
-                                <p class="h4" style="color: #fca82a;">Minggu, 05 Maret 2023</p>
+                                <p class="h4" style="color: #fca82a;">{{ \Carbon\Carbon::parse($data->contract_date)->isoFormat('dddd, D MMMM Y') }}</p>
                             </div>
                         </div>
 

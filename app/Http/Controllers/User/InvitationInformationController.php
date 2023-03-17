@@ -24,7 +24,7 @@ class InvitationInformationController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.user.invitationinformation.add');
     }
 
     /**
@@ -32,7 +32,18 @@ class InvitationInformationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $attrs = $request->validate([
+            'invite'        => 'required|string',
+            'description'   => 'required|string'
+        ]);
+
+        InvitationInformation::create([
+            'user_id'       => Auth::user()->id,
+            'invite'        => $attrs['invite'],
+            'description'   => $attrs['description']
+        ]);
+
+        return redirect()->route('user.invitationinformation.index')->with('success', 'Informasi undangan berhasil disimpan!');
     }
 
     /**
@@ -48,7 +59,9 @@ class InvitationInformationController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $invite = InvitationInformation::find($id);
+
+        return view('dashboard.user.invitationinformation.edit', compact(['invite']));
     }
 
     /**
@@ -56,7 +69,19 @@ class InvitationInformationController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $invitation = InvitationInformation::find($id);
+
+        $attrs = $request->validate([
+            'invite'        => 'required|string',
+            'description'   => 'required|string'
+        ]);
+
+        $invitation->update([
+            'invite'        => $attrs['invite'],
+            'description'   => $attrs['description']
+        ]);
+
+        return redirect()->route('user.invitationinformation.index')->with('success', 'Informasi undangan berhasil diubah!');
     }
 
     /**

@@ -17,8 +17,10 @@ class InvitationController extends Controller
         $landing = GeneralSetting::selectRaw('general_settings.*')
         ->selectRaw('bride_men.shortname as shortname_man')
         ->selectRaw('bride_women.shortname as shortname_woman')
+        ->selectRaw('event_information.contract_date')
         ->leftJoin('bride_men', 'bride_men.user_id', '=', 'general_settings.user_id')
         ->leftJoin('bride_women', 'bride_women.user_id', '=', 'general_settings.user_id')
+        ->leftJoin('event_information', 'event_information.user_id', '=', 'general_settings.user_id')
         ->where('general_settings.domain', $name)
         ->get();
 

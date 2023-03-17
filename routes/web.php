@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InvitationController;
+use App\Http\Controllers\User\AdditionalEventController;
 use App\Http\Controllers\User\GeneralSettingController;
 use App\Http\Controllers\User\BrideManController;
 use App\Http\Controllers\User\BrideWomanController;
@@ -93,6 +94,10 @@ Route::group(['middleware' => ['role:user']], function () {
             Route::post('/informasiundangan/store', 'store')->name('user.invitationinformation.store');
             Route::get('/informasiundangan/{id}/edit', 'edit')->name('user.invitationinformation.edit');
             Route::put('/informasiundangan/{id}/update', 'update')->name('user.invitationinformation.update');
+        });
+
+        Route::controller(AdditionalEventController::class)->group(function(){
+            Route::get('/acaratambahan', 'index')->name('user.additionalevent.index');
         });
     });
 });

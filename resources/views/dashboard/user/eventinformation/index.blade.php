@@ -28,6 +28,7 @@
                 <div class="card custom-card">
                     <div class="card-header">
                         <h4 class="card-title">Settingan Umum</h4>
+                        {{-- <img src="https://maps.geoapify.com/v1/staticmap?style=osm-carto&width=600&height=400&center=lonlat:106.85180,-6.43277&zoom=14&marker=lonlat:106.85180,-6.43277;color:%23ff0000;size:medium&apiKey=2b8f241eadb8432785b5bfbf819ad399" alt="map" class="img-thumbnail w-50"> --}}
                     </div>
                     <div class="card-body">
                         <div>
