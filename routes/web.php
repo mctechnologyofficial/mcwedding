@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InvitationController;
+use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\User\AdditionalEventController;
 use App\Http\Controllers\User\GeneralSettingController;
 use App\Http\Controllers\User\BrideManController;
@@ -46,6 +47,13 @@ Route::controller(InvitationController::class)->group(function(){
 Route::group(['middleware' => ['role:user']], function () {
 
     Route::prefix('dashboard')->group(function(){
+
+        Route::controller(TransactionController::class)->group(function(){
+            Route::get('/upgrade', 'index')->name('user.transaction.upgrade');
+            Route::get('/checkout', 'create')->name('user.transaction.checkout');
+            Route::post('/cashout', 'store')->name('user.transaction.cashout');
+            Route::post('/midtrans-callback', 'calback')->name('user.transaction.callback');
+        });
 
         // General Setting Route
         Route::controller(GeneralSettingController::class)->group(function(){
